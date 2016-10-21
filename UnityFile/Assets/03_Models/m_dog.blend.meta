@@ -80,6 +80,7 @@ ModelImporter:
     7400002: ArmatureAction
     7400004: Running
     7400006: Sprint
+    7400008: Idle
     9500000: //RootNode
     13700000: Dog
     13700002: EyeLeft
@@ -466,6 +467,96 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 119
+    - serializedVersion: 16
+      name: Idle
+      takeName: Default Take
+      firstFrame: 156
+      lastFrame: 213
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001
+        weight: 1
+      - path: Armature/Bone/Bone_002
+        weight: 1
+      - path: Armature/Bone/Bone_002/Bone_003
+        weight: 1
+      - path: Armature/Bone/Bone_002/Bone_004
+        weight: 1
+      - path: Armature/Bone_005
+        weight: 1
+      - path: Armature/Bone_005/Bone_006
+        weight: 1
+      - path: Armature/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Armature/Bone_005/Bone_006/Bone_007/Bone_008
+        weight: 1
+      - path: Armature/Bone_005/Bone_009
+        weight: 1
+      - path: Armature/Bone_005/Bone_009/Bone_019
+        weight: 1
+      - path: Armature/Bone_005/Bone_009/Bone_019/Bone_021
+        weight: 1
+      - path: Armature/Bone_005/Bone_009/Bone_019/Bone_021/Bone_023
+        weight: 1
+      - path: Armature/Bone_005/Bone_010
+        weight: 1
+      - path: Armature/Bone_005/Bone_010/Bone_020
+        weight: 1
+      - path: Armature/Bone_005/Bone_010/Bone_020/Bone_022
+        weight: 1
+      - path: Armature/Bone_005/Bone_010/Bone_020/Bone_022/Bone_024
+        weight: 1
+      - path: Armature/Bone_011
+        weight: 1
+      - path: Armature/Bone_011/Bone_014
+        weight: 1
+      - path: Armature/Bone_011/Bone_014/Bone_016
+        weight: 1
+      - path: Armature/Bone_011/Bone_014/Bone_016/Bone_018
+        weight: 1
+      - path: Armature/Bone_012
+        weight: 1
+      - path: Armature/Bone_012/Bone_013
+        weight: 1
+      - path: Armature/Bone_012/Bone_013/Bone_015
+        weight: 1
+      - path: Armature/Bone_012/Bone_013/Bone_015/Bone_017
+        weight: 1
+      - path: Dog
+        weight: 1
+      - path: EyeLeft
+        weight: 1
+      - path: EyeRight
+        weight: 1
+      - path: Nose
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 154
     isReadable: 1
   meshes:
     lODScreenPercentages: []
