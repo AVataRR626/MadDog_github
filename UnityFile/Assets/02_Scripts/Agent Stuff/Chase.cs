@@ -89,6 +89,7 @@ public class Chase : MonoBehaviour
     {
         dist2Target = Dist2Target;
 
+        //keep chasing target while it is in range
         if (InChaseRange)
         {
             mover.Destination = target;
@@ -96,8 +97,19 @@ public class Chase : MonoBehaviour
         }
         else
         {
-            patrol.enabled = true;
-            patrol.SetDestination();
+            //this means that the target is too far away, time to back off...
+            if (dist2Target > minChaseRange)
+            {
+                patrol.enabled = true;
+                patrol.SetDestination();
+            }
+            else
+            {
+                //this means you're right up against your target, don't move into
+                //the target..
+                patrol.enabled = false;
+                mover.Destination = transform;
+            }
         }
     }
 }

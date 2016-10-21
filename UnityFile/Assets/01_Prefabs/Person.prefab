@@ -127,6 +127,9 @@ MonoBehaviour:
   tagList:
   - Poop
   - Player
+  closestPerTag: []
+  contactSize: 0
+  ignoreRange: 10
   contactList:
   - {fileID: 0}
   - {fileID: 0}
@@ -228,8 +231,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  contactSize: 0
-  ignoreRange: 10
 --- !u!114 &114000012473700636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,10 +244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   maxChaseRange: 4
-  minChaseRange: 0
-  tagPriorities:
-  - Player
-  - Poop
+  minChaseRange: 1.5
+  myRadar: {fileID: 114000012438918346}
 --- !u!114 &114000012573623064
 MonoBehaviour:
   m_ObjectHideFlags: 1

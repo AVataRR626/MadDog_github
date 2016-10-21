@@ -570,12 +570,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &655448272 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000012438918346, guid: 3c5a79b1a0bd6ec4792ff3010f41c452,
-    type: 2}
-  m_PrefabInternal: {fileID: 658556639}
-  m_Script: {fileID: 11500000, guid: 2b8d67b2e31d0644a8860fce25dfbe50, type: 3}
 --- !u!1001 &658556639
 Prefab:
   m_ObjectHideFlags: 0
@@ -640,11 +634,6 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 106208617}
-    - target: {fileID: 114000012473700636, guid: 3c5a79b1a0bd6ec4792ff3010f41c452,
-        type: 2}
-      propertyPath: myRadar
-      value: 
-      objectReference: {fileID: 655448272}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c5a79b1a0bd6ec4792ff3010f41c452, type: 2}
   m_IsPrefabParent: 0
