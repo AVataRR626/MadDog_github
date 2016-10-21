@@ -18,21 +18,38 @@ public class PlayerMovement : MonoBehaviour {
 	private float rotSpeed = 150f;
 	private float moveSpeed = 8f;
 	private float jumpPower = 300f;
+
+	private bool sprinting = false;
 	//for animations
 	private bool freeze = false;
 	private float lastTime = -5f;
+
+	private Animator anim;
 	// Use this for initialization
 	void Start () {
-		
+		if(jumpable) anim = transform.GetChild(1).GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	if(isActiveMovement){
+	if(isActiveMovement)
+		movement();
+	else{anim.SetBool("Running",false);}
+	if(jumpable)
+		setAnim();
+	}
+
+	private void setAnim(){
+		anim.SetBool("Sprinting",sprinting);
+
+	}
+
+	private void movement(){
 		if(Input.GetButtonDown("poop")) {
 			Freeze();
 		}
-		
+		if(Input.GetButton("Sprint")) sprinting = true;
+		else sprinting = false;
 		float rVector =0f,mVector=0f;
 		if (Input.GetButton("S")) {//reverses left right while moving backwards
 			mVector -=1;
@@ -63,13 +80,17 @@ public class PlayerMovement : MonoBehaviour {
 				lastTime = Time.time;
 			}
 		}
-		}
 	}
 
-
 	private void move(float mVector){
-	if(!freeze)
-		transform.Translate((transform.forward) * moveSpeed * Time.deltaTime * mVector,Space.World);
+		if(!freeze){
+			transform.Translate((transform.forward) * moveSpeed * ((System.Convert.ToInt32(sprinting))+1) * Time.deltaTime * mVector,Space.World);
+			if(jumpable){
+				anim.SetBool("Running",true);
+				if(mVector == 0) anim.SetBool("Running",false);
+			}
+				
+		}
 	}
 
 
