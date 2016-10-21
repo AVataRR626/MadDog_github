@@ -4,11 +4,14 @@ using System.Collections;
 
 
 public class PlayerMovement : MonoBehaviour {
+	//TODO: set this
+	private float poopAnimTime = 1f;
 
-	public float poopAnimTime = 1f;
+	public bool jumpable = true;
 
 	//if this is the current active movement script
 	//for use with ride-on etc - only one should be acttive
+	[SerializeField]
 	private bool isActiveMovement;
 
 	//movement vars
@@ -25,6 +28,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	if(isActiveMovement){
 		if(Input.GetButtonDown("poop")) {
 			Freeze();
 		}
@@ -54,9 +58,11 @@ public class PlayerMovement : MonoBehaviour {
 
 
 		if ((Input.GetButtonDown("Jump") && Time.time - lastTime > 1f) && !freeze){
-			Debug.Log("jump");
-			GetComponent<Rigidbody>().AddForce(Vector3.up * jumpPower);
-			lastTime = Time.time;
+			if(Physics.Raycast(transform.position,transform.up * -1 , 2f)){
+				GetComponent<Rigidbody>().AddForce(Vector3.up * jumpPower);
+				lastTime = Time.time;
+			}
+		}
 		}
 	}
 
@@ -78,4 +84,10 @@ public class PlayerMovement : MonoBehaviour {
 		Debug.Log("unFreeze");
 		freeze = false;
 	}
+
+	public void setActive(){
+		isActiveMovement = ! isActiveMovement;
+	}
+
+	public bool getActive() {return isActiveMovement;}
 }
