@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000011594366462}
   - 114: {fileID: 114000011271487526}
   - 135: {fileID: 135000011377735034}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RangeTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
