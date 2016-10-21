@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Poop
   - Knockable
+  - People
   layers:
   - Default
   - TransparentFX
