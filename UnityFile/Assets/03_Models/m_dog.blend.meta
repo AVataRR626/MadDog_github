@@ -72,6 +72,7 @@ ModelImporter:
     4300004: Nose
     4300006: Dog
     7400000: Default Take
+    7400002: ArmatureAction
     9500000: //RootNode
     13700000: Dog
     13700002: EyeLeft
