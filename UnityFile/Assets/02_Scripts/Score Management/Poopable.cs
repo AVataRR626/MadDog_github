@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿/*
+NSI GameJam 11
+Mad Dog
+
+The poop handling class.
+-Matt Cabanag
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class Poopable : MonoBehaviour
@@ -13,7 +21,8 @@ public class Poopable : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 
@@ -21,8 +30,9 @@ public class Poopable : MonoBehaviour
     {
         Debug.Log("POOP: " + col.gameObject.tag + "," + poopTag);
 
-        if(col.gameObject.tag.Contains(poopTag))
+        if(col.gameObject.tag == (poopTag))
         {
+            Debug.Log("C'mooon");
             ScoreManager.instance.AddScore((int)baseScore);
         }
     }
