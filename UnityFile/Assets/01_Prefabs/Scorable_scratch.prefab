@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseScore: 10
-  velocityMultiplier: 0.5
+  velocityMultiplier: 5
   scoreFX: {fileID: 0}
   comboTimerBonus: 1.5
   knocked: 0

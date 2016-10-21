@@ -95,7 +95,7 @@ public class ScoreManager : MonoBehaviour
         if (!Armed)
             return;
 
-        score += 1;
+        score += add;
 
         if(comboTimer > 0)
         {

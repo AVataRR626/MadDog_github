@@ -22,7 +22,9 @@ public class Knockable : MonoBehaviour
     {
         get
         {
-            float result = baseScore + (rBody.velocity.magnitude * velocityMultiplier);
+            float bonus = (rBody.velocity.magnitude * velocityMultiplier);
+            float result = baseScore + bonus;
+            Debug.Log("Score: " + result + "; bonus component :> " + bonus);
             return (int)result;
         }
     }

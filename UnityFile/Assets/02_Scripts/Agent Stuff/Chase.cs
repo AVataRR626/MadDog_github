@@ -156,7 +156,7 @@ public class Chase : MonoBehaviour
         }
 
 
-        Debug.Log("Raycast hit a " + hit.collider.name + " result:" + result);
+        //Debug.Log("Raycast hit a " + hit.collider.name + " result:" + result);
 
         return result;
     }
