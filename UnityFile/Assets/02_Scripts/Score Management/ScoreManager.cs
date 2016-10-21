@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
 
+
     public float armingDelay = 0.5f;
+    public string specialMessage = "";
+    public Text specialMessageDisplay;
 
     private float comboTimer;
     private int score;
@@ -54,7 +58,9 @@ public class ScoreManager : MonoBehaviour
             Destroy(gameObject);
 
         instance = this;
-	}
+
+        SyncSpecialMessage();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -110,5 +116,26 @@ public class ScoreManager : MonoBehaviour
             return;
 
         comboTimer += newTime;
+    }
+
+    [ContextMenu("TestMessageSync")]
+    void SyncSpecialMessage()
+    {
+
+        specialMessageDisplay.gameObject.SetActive(true);
+        specialMessageDisplay.SendMessage("Reset");
+
+        if (specialMessageDisplay != null)
+        {
+            specialMessageDisplay.text = specialMessage;
+            specialMessageDisplay.SendMessage("Pulse");
+        }
+    }
+
+    public void SetSpecialMessage(string msg)
+    {
+        specialMessage = msg;
+
+        SyncSpecialMessage();
     }
 }
