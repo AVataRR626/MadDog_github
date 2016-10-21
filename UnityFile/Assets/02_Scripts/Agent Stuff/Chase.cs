@@ -17,6 +17,8 @@ public class Chase : MonoBehaviour
     public float maxChaseRange = 2;
     public float minChaseRange = 0;
 
+    public Radar myRadar;
+
     public float Dist2Target
     {
         get
@@ -55,7 +57,32 @@ public class Chase : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        UpdateTarget();
         HandleChase();
+    }
+
+    //keep searching for more appripriate targets
+    void UpdateTarget()
+    {
+        if(myRadar != null)
+        {
+            //use the radar priorities to specify most desired targets
+            for(int i = 0; i < myRadar.closestPerTag.Length; i++)
+            {
+                //i.e., only chase the subsequent priority type if there is none
+                //of the higher priority type that is eligible.
+                GameObject candidate = myRadar.closestPerTag[i];
+                if (candidate != null)
+                {
+                    float range = Vector3.Distance(candidate.transform.position, transform.position);
+                    if(range <= maxChaseRange)
+                    { 
+                        target = myRadar.closestPerTag[i].transform;
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     void HandleChase()
