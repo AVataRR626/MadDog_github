@@ -1,24 +1,30 @@
 fileFormatVersion: 2
-guid: 9007e429239d5e742b8b068077ae1b69
-timeCreated: 1477140086
+guid: ed7d5c1b24d6a3c4b90ae46bbb6f524c
+timeCreated: 1477146349
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
+    100000: BathroomSink
     100002: Cube
-    100004: Fridge
-    400000: //RootNode
+    100004: Cube_001
+    100006: //RootNode
+    400000: BathroomSink
     400002: Cube
-    400004: Fridge
-    2300000: //RootNode
+    400004: Cube_001
+    400006: //RootNode
+    2300000: BathroomSink
     2300002: Cube
-    2300004: Fridge
-    3300000: //RootNode
+    2300004: Cube_001
+    3300000: BathroomSink
     3300002: Cube
-    3300004: Fridge
-    4300000: Fridge
+    3300004: Cube_001
+    4300000: Cube_001
     4300002: Cube
+    4300004: BathroomSink
+    6400000: BathroomSink
+    6400002: Cube
+    6400004: Cube_001
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -47,10 +53,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 0.5
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

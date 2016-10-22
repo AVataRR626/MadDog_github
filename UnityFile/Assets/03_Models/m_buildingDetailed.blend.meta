@@ -34,6 +34,9 @@ ModelImporter:
     100052: Window7
     100054: WindowSlidingDoor
     100056: StairBannister
+    100058: FirstFloor_Divider
+    100060: Cube
+    100062: Chimney
     400000: Fence
     400002: FirstFloor_Ceiling
     400004: FirstFloor_Floor
@@ -63,6 +66,9 @@ ModelImporter:
     400052: Window7
     400054: WindowSlidingDoor
     400056: StairBannister
+    400058: FirstFloor_Divider
+    400060: Cube
+    400062: Chimney
     2300000: Fence
     2300002: FirstFloor_Ceiling
     2300004: FirstFloor_Floor
@@ -91,6 +97,9 @@ ModelImporter:
     2300050: Window7
     2300052: WindowSlidingDoor
     2300054: StairBannister
+    2300056: FirstFloor_Divider
+    2300058: Cube
+    2300060: Chimney
     3300000: Fence
     3300002: FirstFloor_Ceiling
     3300004: FirstFloor_Floor
@@ -119,6 +128,9 @@ ModelImporter:
     3300050: Window7
     3300052: WindowSlidingDoor
     3300054: StairBannister
+    3300056: FirstFloor_Divider
+    3300058: Cube
+    3300060: Chimney
     4300000: FirstFloor_Ceiling
     4300002: SecondFloor_Walls_001
     4300004: SecondFloor_Walls
@@ -147,6 +159,9 @@ ModelImporter:
     4300050: Window2
     4300052: WindowSlidingDoor
     4300054: StairBannister
+    4300056: FirstFloor_Divider
+    4300058: Cube
+    4300060: Chimney
     6400000: Fence
     6400002: FirstFloor_Ceiling
     6400004: FirstFloor_Floor
@@ -175,6 +190,9 @@ ModelImporter:
     6400050: Window7
     6400052: WindowSlidingDoor
     6400054: StairBannister
+    6400056: FirstFloor_Divider
+    6400058: Cube
+    6400060: Chimney
     7400000: Default Take
     9500000: //RootNode
   materials:
