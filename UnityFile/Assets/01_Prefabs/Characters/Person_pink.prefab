@@ -27,6 +27,7 @@ GameObject:
   - 114: {fileID: 114000010503467212}
   - 114: {fileID: 114000014087905470}
   - 143: {fileID: 143000013840649820}
+  - 114: {fileID: 114000014042937166}
   m_Layer: 0
   m_Name: Person_pink
   m_TagString: People
@@ -935,6 +936,7 @@ MonoBehaviour:
   - Poop
   - Player
   closestPerTag: []
+  closestPerTagIndex: 
   contactSize: 0
   ignoreRange: 10
   contactList:
@@ -1051,6 +1053,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
   agent: {fileID: 0}
+--- !u!114 &114000014042937166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010088745084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad1924375fddad48b5430d6b9232ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  endGameTree: {fileID: 0}
+  catchRange: 1.74
 --- !u!114 &114000014087905470
 MonoBehaviour:
   m_ObjectHideFlags: 1
