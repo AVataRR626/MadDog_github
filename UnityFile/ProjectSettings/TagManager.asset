@@ -7,6 +7,8 @@ TagManager:
   - Poop
   - Knockable
   - People
+  - Useable
+  - EndGameTree
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class Knockable : MonoBehaviour
     public float comboTimerBonus = 0.5f;
     public Color knockedTint = new Color(0.1f, 0.1f, 0.1f, 0.1f);
     public float basePlayerKnockForce = 50;
-    public float playerSpeedForceMultiplier = 2;
+    public float playerSpeedForceMultiplier = 1.5f;
 
     public bool knocked = false;
 
@@ -64,8 +64,8 @@ public class Knockable : MonoBehaviour
         if (c.collider.tag == "Player")
         {
             Vector3 knockDirection = transform.position - c.gameObject.transform.position;
-            knockDirection.y += 0.5f;
-            float totalForce = basePlayerKnockForce;
+            knockDirection.y += 0.65f;
+            float totalForce = basePlayerKnockForce * c.gameObject.GetComponent<PlayerMovement>().Speed * playerSpeedForceMultiplier;
             rBody.AddForce(knockDirection * basePlayerKnockForce);
         }
     }
