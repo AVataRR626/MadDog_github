@@ -108,8 +108,11 @@ public class Chase : MonoBehaviour
             //this means that the target is too far away, time to back off...
             if (dist2Target > minChaseRange || target == null)
             {
+                Debug.Log("Too far, return to patrol - or target destroyed");
                 patrol.enabled = true;
                 patrol.SetDestination();
+                target = null;
+                mover.Destination = transform;
             }
             else
             {

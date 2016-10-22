@@ -14,6 +14,7 @@ public class Radar : MonoBehaviour
 {
     public string [] tagList;//list of valid tags; order of tags implies priority
     public GameObject[] closestPerTag;
+    public int[] closestPerTagIndex;
     public int contactSize = 0;
     public float ignoreRange = 10;
     public GameObject[] contactList = new GameObject[100];
@@ -38,6 +39,7 @@ public class Radar : MonoBehaviour
         radarTrigger.isTrigger = true;
         minDistPerTag = new float[tagList.Length];
         closestPerTag = new GameObject[tagList.Length];
+        closestPerTagIndex = new int[tagList.Length];
     }
 	
 	// Update is called once per frame
@@ -89,6 +91,7 @@ public class Radar : MonoBehaviour
                     { 
                         minDistPerTag[tagIndex] = range;
                         closestPerTag[tagIndex] = contactList[i];
+                        closestPerTagIndex[tagIndex] = i;
                     }
 
                 }
@@ -112,11 +115,22 @@ public class Radar : MonoBehaviour
         }
     }
 
-    void RemoveContact(int i)
-    {
-        int cursor = i;
+    void RemoveContact(int index)
+    { 
+        int cursor = index;
 
-        while(cursor < contactSize && cursor < contactList.Length)
+        //check if the object is the closest type and kill of it is
+        for(int i = 0; i < tagList.Length; i++)
+        {
+            if(index == closestPerTagIndex[i])
+            {
+                closestPerTagIndex[i] = -1;
+                closestPerTag[i] = null;
+            }
+        }
+
+        //get rid of it from the general list
+        while (cursor < contactSize && cursor < contactList.Length)
         {
             contactList[cursor] = contactList[cursor + 1];
             cursor++;
