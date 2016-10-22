@@ -9,7 +9,7 @@ using UnityEngine;
 using System.Collections;
 
 //nothing happened :p
-
+//[RequireComponent(typeof(BoxCollider))]
 [RequireComponent(typeof(Rigidbody))]
 public class Knockable : MonoBehaviour
 {
