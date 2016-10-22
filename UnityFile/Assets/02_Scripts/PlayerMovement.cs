@@ -50,10 +50,14 @@ public class PlayerMovement : MonoBehaviour {
 			Poop();
 		}
 	}
+	
+	private bool isGrounded(){
+		return Physics.Raycast(transform.position,transform.up * -1 , 2f);
+	}
 
 	private void setAnim(){
 		anim.SetBool("Sprinting",sprinting);
-
+		anim.SetBool("Jumping",!isGrounded());
 	}
 
 	private void Poop(){
