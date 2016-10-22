@@ -57,15 +57,16 @@ public class PersonAnimationManager : MonoBehaviour
         else
         {
             anim.SetBool(runningStateString, false);
+            anim.SetBool(actionStateString, false);
 
-            if (chaser.InChaseRange)
+            if (chaser.target != null)
             {
-                anim.SetBool(actionStateString, false);
-            }
-            else
-            {
-                if (chaser.Dist2Target <= chaser.minChaseRange)
-                    anim.SetBool(actionStateString, true);
+                if (!chaser.InChaseRange)
+                {
+                    if (chaser.Dist2Target <= chaser.minChaseRange)
+                        anim.SetBool(actionStateString, true);
+
+                }
             }
         }
     }

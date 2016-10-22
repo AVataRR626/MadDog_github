@@ -40,7 +40,7 @@ GameObject:
   - 199: {fileID: 199000012026585170}
   m_Layer: 0
   m_Name: NewPoop
-  m_TagString: Untagged
+  m_TagString: Poop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013589879966}
   m_LocalRotation: {x: 0.75565475, y: 0.21490526, z: -0.25923964, w: 0.56177974}
-  m_LocalPosition: {x: 2.74348, y: -0.85575914, z: -2.0113137}
+  m_LocalPosition: {x: -2.006947, y: 3.22, z: -35.3724}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_LocalEulerAnglesHint: {x: 162.202, y: 30.189987, z: 10.662994}
   m_Children:
@@ -192,7 +192,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.57
+  m_Radius: 6.34
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198000010066198476
 ParticleSystem:

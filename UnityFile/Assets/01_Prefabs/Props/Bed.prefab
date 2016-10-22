@@ -39,6 +39,7 @@ GameObject:
   - 54: {fileID: 54000010254993064}
   - 65: {fileID: 65000011971860552}
   - 114: {fileID: 114000010528264108}
+  - 114: {fileID: 114000011764448690}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -103,10 +104,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011211558886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.963596, y: -1.121584, z: 3.8774166}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: -43.2, y: 0.66, z: -6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
   m_Children:
   - {fileID: 4000013579189354}
   - {fileID: 4000012588021992}
@@ -354,3 +355,16 @@ MonoBehaviour:
   comboTimerBonus: 0.5
   knockedTint: {r: 0.1, g: 0.1, b: 0.1, a: 0.1}
   knocked: 0
+--- !u!114 &114000011764448690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011211558886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81194bbd2a09ccc4c835c009e6ac21a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScore: 50
+  poopTag: Poop
