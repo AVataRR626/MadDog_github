@@ -23,6 +23,7 @@ GameObject:
   - 65: {fileID: 65000011552108718}
   - 65: {fileID: 65000010691796958}
   - 114: {fileID: 114000011815116688}
+  - 114: {fileID: 114000012800798492}
   m_Layer: 0
   m_Name: Couch
   m_TagString: Untagged
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013602253768}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.56, y: -1.03, z: -8.005}
+  m_LocalPosition: {x: -47.753326, y: 0.48, z: -16.85357}
   m_LocalScale: {x: 0.44000018, y: 0.44000018, z: 0.44000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -166,3 +167,16 @@ MonoBehaviour:
   comboTimerBonus: 0.5
   knockedTint: {r: 0.1, g: 0.1, b: 0.1, a: 0.1}
   knocked: 0
+--- !u!114 &114000012800798492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013602253768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81194bbd2a09ccc4c835c009e6ac21a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScore: 50
+  poopTag: Poop

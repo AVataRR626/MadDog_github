@@ -26,25 +26,37 @@ public class Patrol : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-	    if(mover.agent.remainingDistance <= mover.agent.stoppingDistance)
+
+        CyclePatrolPoints();
+    }
+
+    public void CyclePatrolPoints()
+    {
+        if (patrolPoints.Length > 0)
         {
-            Debug.Log("Moving to next patrol point!");
-            patrolIndex++;
-            patrolIndex = LoopInt(patrolIndex, 0, patrolPoints.Length - 1);
-            SetDestination();
+            if (mover.agent.remainingDistance <= mover.agent.stoppingDistance)
+            {
+                Debug.Log("Moving to next patrol point!");
+                patrolIndex++;
+                patrolIndex = LoopInt(patrolIndex, 0, patrolPoints.Length - 1);
+                SetDestination();
+            }
         }
-        
-	}
+    }
 
     public void SetDestination(int i)
     {
-        patrolIndex = i;
-        SetDestination();
+        if (patrolPoints.Length > 0)
+        {
+            patrolIndex = i;
+            SetDestination();
+        }
     }
 
     public void SetDestination()
     {
-        mover.Destination = patrolPoints[patrolIndex];
+        if (patrolPoints.Length > 0)
+            mover.Destination = patrolPoints[patrolIndex];
     }
 
     public static int LoopInt(int value, int min, int max)

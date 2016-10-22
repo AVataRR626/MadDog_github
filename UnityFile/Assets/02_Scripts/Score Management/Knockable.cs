@@ -52,13 +52,25 @@ public class Knockable : MonoBehaviour
             ScoreManager.instance.AddScore(ActualScore,comboTimerBonus);
             knocked = true;
 
-            Renderer r = GetComponent<Renderer>();
-            r.material.color = knockedTint;
+            ApplyTint(transform, knockedTint);
+
+
 
             SpecialMessage sm = GetComponent<SpecialMessage>();
 
             if (sm != null)
                 sm.Trigger();
         }
+    }
+
+    public static void ApplyTint(Transform root, Color tint)
+    {
+        Renderer r = root.GetComponent<Renderer>();
+
+        if (r != null)
+            r.material.color = tint;
+
+        foreach (Transform child in root)
+            ApplyTint(child, tint);
     }
 }
