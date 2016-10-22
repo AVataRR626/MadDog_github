@@ -89,9 +89,25 @@ public class ScoreManager : MonoBehaviour
 
             if (lastCombo > 1)
             {
-                
+                int baseBonus = 0;
+                int xTraBonus = 0;
 
-                SpawnMessage(lastCombo + "X COMBO!!");
+                if(lastCombo <= comboBonusThreshold)
+                {
+                    baseBonus = lastCombo * comboBonusBasic;
+                }
+                else
+                {
+                    baseBonus = lastCombo * comboBonusBasic;
+                    xTraBonus = (lastCombo - comboBonusThreshold) * comboBonusExtra;
+                }
+
+                int totalComboScore = baseBonus + xTraBonus;
+
+                AddScore(totalComboScore);
+
+                string comboScoreMsg = totalComboScore + " BONUS POINTS";
+                SpawnMessage(lastCombo + "x COMBO!!" + "\n" + comboScoreMsg);
             }
         }
     }

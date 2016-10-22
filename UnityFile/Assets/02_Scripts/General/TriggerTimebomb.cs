@@ -15,17 +15,6 @@ public class TriggerTimebomb : MonoBehaviour
     public float timer = 3;
     public string[] tagList;
 
-	// Use this for initialization
-	void Start ()
-    {
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	
-	}
 
     void OnTriggerEnter(Collider col)
     {

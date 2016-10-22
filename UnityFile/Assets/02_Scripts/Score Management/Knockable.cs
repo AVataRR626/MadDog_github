@@ -15,6 +15,7 @@ public class Knockable : MonoBehaviour
     public float velocityMultiplier = 1.5f;
     public GameObject scoreFX;
     public float comboTimerBonus = 0.5f;
+    public Color knockedTint = new Color(0.1f, 0.1f, 0.1f, 0.1f);
 
     public bool knocked = false;
 
@@ -50,6 +51,9 @@ public class Knockable : MonoBehaviour
         { 
             ScoreManager.instance.AddScore(ActualScore,comboTimerBonus);
             knocked = true;
+
+            Renderer r = GetComponent<Renderer>();
+            r.material.color = knockedTint;
 
             SpecialMessage sm = GetComponent<SpecialMessage>();
 
