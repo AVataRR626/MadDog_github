@@ -37,6 +37,34 @@ public class PlayerMovement : MonoBehaviour {
 
 	private Animator anim;
 	private Image stamBar;
+
+    public float Speed
+    {
+        get
+        {
+            float result = moveSpeed;
+
+            if (sprinting)
+                result *= 2;
+
+            return result; 
+        }
+
+
+        set
+        {
+            moveSpeed = value;
+        }
+    }
+
+    public int PoopAmmo
+    {
+        get
+        {
+            return poopAmmo;
+        }
+    }
+
 	// Use this for initialization
 	void Start () {
 		if(jumpable) anim = transform.GetChild(1).GetComponent<Animator>();
