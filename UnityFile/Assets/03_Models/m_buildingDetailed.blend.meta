@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: 6afd4d3c04d19814bb3f33e4a7e1c9a8
+timeCreated: 1477111520
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Fence
+    100002: FirstFloor_Ceiling
+    100004: FirstFloor_Floor
+    100006: FirstFloor_Walls
+    100008: //RootNode
+    100010: ScaleCube
+    100012: SecondFloor_Walls
+    100014: SecondFloor_Walls_001
+    100016: Staircase
+    400000: Fence
+    400002: FirstFloor_Ceiling
+    400004: FirstFloor_Floor
+    400006: FirstFloor_Walls
+    400008: //RootNode
+    400010: ScaleCube
+    400012: SecondFloor_Walls
+    400014: SecondFloor_Walls_001
+    400016: Staircase
+    2300000: Fence
+    2300002: FirstFloor_Ceiling
+    2300004: FirstFloor_Floor
+    2300006: FirstFloor_Walls
+    2300008: ScaleCube
+    2300010: SecondFloor_Walls
+    2300012: SecondFloor_Walls_001
+    2300014: Staircase
+    3300000: Fence
+    3300002: FirstFloor_Ceiling
+    3300004: FirstFloor_Floor
+    3300006: FirstFloor_Walls
+    3300008: ScaleCube
+    3300010: SecondFloor_Walls
+    3300012: SecondFloor_Walls_001
+    3300014: Staircase
+    4300000: FirstFloor_Ceiling
+    4300002: SecondFloor_Walls_001
+    4300004: SecondFloor_Walls
+    4300006: FirstFloor_Floor
+    4300008: Staircase
+    4300010: Fence
+    4300012: FirstFloor_Walls
+    4300014: ScaleCube
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
