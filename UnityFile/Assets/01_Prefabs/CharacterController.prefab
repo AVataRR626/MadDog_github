@@ -716,7 +716,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010383190534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8179121, y: -0.40956163, z: -0.59664106}
+  m_LocalPosition: {x: 0.8179121, y: -0.95, z: -0.59664106}
   m_LocalScale: {x: 0.613011, y: 0.613011, z: 0.613011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1198,10 +1198,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpable: 1
+  stanima: 100
   poop: {fileID: 1000013589879966, guid: c8377ce9310977242b378bab7c1742e0, type: 2}
   poopSpawnLoc: {fileID: 4000012062777124}
   poopAmmo: 5
   isActiveMovement: 1
+  rotSpeed: 150
+  moveSpeed: 8
+  jumpPower: 300
 --- !u!114 &114000011377738956
 MonoBehaviour:
   m_ObjectHideFlags: 1
