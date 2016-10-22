@@ -189,8 +189,8 @@ MonoBehaviour:
   specialMessage: TestMessage
   specialMessageDisplay: {fileID: 114000010825829894}
   comboBonusThreshold: 3
-  comboBonusBasic: 5
-  comboBonusExtra: 10
+  comboBonusBasic: 10
+  comboBonusExtra: 20
 --- !u!114 &114000010243487626
 MonoBehaviour:
   m_ObjectHideFlags: 1
