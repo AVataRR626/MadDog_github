@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
+    public Transform messageSpawnPoint;
+    public Text messagePrefab;
 
     public float armingDelay = 0.5f;
+    public string specialMessage = "";
+    public Text specialMessageDisplay;
+    public int comboBonusThreshold = 5;
+    public int comboBonusBasic = 5;
+    public int comboBonusExtra = 10;
 
     private float comboTimer;
     private int score;
     private int lastCombo;
     private int comboCounter;
-
 
 
     public bool Armed
@@ -46,6 +53,8 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+
+
 	// Use this for initialization
 	void Start ()
     {
@@ -54,7 +63,9 @@ public class ScoreManager : MonoBehaviour
             Destroy(gameObject);
 
         instance = this;
-	}
+
+        SyncSpecialMessage();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -74,6 +85,14 @@ public class ScoreManager : MonoBehaviour
         {
             lastCombo = comboCounter;
             comboCounter = 0;
+            comboTimer = 0;
+
+            if (lastCombo > 1)
+            {
+                
+
+                SpawnMessage(lastCombo + "X COMBO!!");
+            }
         }
     }
 
@@ -89,7 +108,7 @@ public class ScoreManager : MonoBehaviour
         if (!Armed)
             return;
 
-        score += 1;
+        score += add;
 
         if(comboTimer > 0)
         {
@@ -110,5 +129,33 @@ public class ScoreManager : MonoBehaviour
             return;
 
         comboTimer += newTime;
+    }
+
+    [ContextMenu("TestMessageSync")]
+    void SyncSpecialMessage()
+    {
+
+        specialMessageDisplay.gameObject.SetActive(true);
+        specialMessageDisplay.SendMessage("Reset");
+
+        if (specialMessageDisplay != null)
+        {
+            specialMessageDisplay.text = specialMessage;
+            specialMessageDisplay.SendMessage("Pulse");
+        }
+    }
+
+    public void SetSpecialMessage(string msg)
+    {
+        specialMessage = msg;
+
+        SyncSpecialMessage();
+    }
+
+    public void SpawnMessage(string message)
+    {
+        Text newMessage = Instantiate(messagePrefab, messageSpawnPoint.transform.position, Quaternion.identity) as Text;
+        newMessage.transform.parent = messageSpawnPoint;
+        newMessage.text = message;
     }
 }

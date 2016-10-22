@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   maxChaseRange: 8
-  minChaseRange: 1.5
+  minChaseRange: 1.75
   myRadar: {fileID: 114000012438918346}
 --- !u!114 &114000012573623064
 MonoBehaviour:

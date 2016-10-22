@@ -5,7 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(Text))]
 public class MadGoatDisplayUtil : MonoBehaviour
 {
-    public enum DisplayMode {score, lastCombo};
+    public enum DisplayMode {score, lastCombo, liveCombo};
     public DisplayMode displayMode;
 
     private Text txt;
@@ -22,8 +22,19 @@ public class MadGoatDisplayUtil : MonoBehaviour
 	    if(displayMode == DisplayMode.score)
             txt.text = ScoreManager.instance.Score.ToString();
 
-        if(displayMode == DisplayMode.lastCombo)
+        if (displayMode == DisplayMode.lastCombo)
+        {
             txt.text = ScoreManager.instance.LastCombo.ToString();
+        }
+
+
+        if (displayMode == DisplayMode.liveCombo)
+        {
+            if (ScoreManager.instance.ComboCounter > 2)
+                txt.text = ScoreManager.instance.LastCombo.ToString() + "x COMBO!";
+            else
+                txt.text = "";
+        }
 
     }
 }
