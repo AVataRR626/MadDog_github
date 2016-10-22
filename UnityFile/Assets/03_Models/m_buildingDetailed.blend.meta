@@ -26,6 +26,14 @@ ModelImporter:
     100036: Window_4_002
     100038: Window_4_003
     100040: Window_4_004
+    100042: Window2
+    100044: Window3
+    100046: Window4
+    100048: Window5
+    100050: Window6
+    100052: Window7
+    100054: WindowSlidingDoor
+    100056: StairBannister
     400000: Fence
     400002: FirstFloor_Ceiling
     400004: FirstFloor_Floor
@@ -47,6 +55,14 @@ ModelImporter:
     400036: Window_4_002
     400038: Window_4_003
     400040: Window_4_004
+    400042: Window2
+    400044: Window3
+    400046: Window4
+    400048: Window5
+    400050: Window6
+    400052: Window7
+    400054: WindowSlidingDoor
+    400056: StairBannister
     2300000: Fence
     2300002: FirstFloor_Ceiling
     2300004: FirstFloor_Floor
@@ -67,6 +83,14 @@ ModelImporter:
     2300034: Window_4_002
     2300036: Window_4_003
     2300038: Window_4_004
+    2300040: Window2
+    2300042: Window3
+    2300044: Window4
+    2300046: Window5
+    2300048: Window6
+    2300050: Window7
+    2300052: WindowSlidingDoor
+    2300054: StairBannister
     3300000: Fence
     3300002: FirstFloor_Ceiling
     3300004: FirstFloor_Floor
@@ -87,6 +111,14 @@ ModelImporter:
     3300034: Window_4_002
     3300036: Window_4_003
     3300038: Window_4_004
+    3300040: Window2
+    3300042: Window3
+    3300044: Window4
+    3300046: Window5
+    3300048: Window6
+    3300050: Window7
+    3300052: WindowSlidingDoor
+    3300054: StairBannister
     4300000: FirstFloor_Ceiling
     4300002: SecondFloor_Walls_001
     4300004: SecondFloor_Walls
@@ -107,6 +139,14 @@ ModelImporter:
     4300034: Window_3
     4300036: Window_2
     4300038: Window1
+    4300040: Window6
+    4300042: Window7
+    4300044: Window5
+    4300046: Window4
+    4300048: Window3
+    4300050: Window2
+    4300052: WindowSlidingDoor
+    4300054: StairBannister
     6400000: Fence
     6400002: FirstFloor_Ceiling
     6400004: FirstFloor_Floor
@@ -127,6 +167,14 @@ ModelImporter:
     6400034: Window_4_002
     6400036: Window_4_003
     6400038: Window_4_004
+    6400040: Window2
+    6400042: Window3
+    6400044: Window4
+    6400046: Window5
+    6400048: Window6
+    6400050: Window7
+    6400052: WindowSlidingDoor
+    6400054: StairBannister
     7400000: Default Take
     9500000: //RootNode
   materials:
