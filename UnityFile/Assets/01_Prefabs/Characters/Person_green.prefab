@@ -240,6 +240,7 @@ GameObject:
   - 114: {fileID: 114000013017027896}
   - 114: {fileID: 114000013621489554}
   - 143: {fileID: 143000013266197308}
+  - 114: {fileID: 114000010240010786}
   m_Layer: 0
   m_Name: Person_green
   m_TagString: People
@@ -890,6 +891,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010240010786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013261428550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad1924375fddad48b5430d6b9232ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  endGameTree: {fileID: 0}
+  catchRange: 1.74
 --- !u!114 &114000012413865944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -905,6 +920,7 @@ MonoBehaviour:
   - Poop
   - Player
   closestPerTag: []
+  closestPerTagIndex: 
   contactSize: 0
   ignoreRange: 10
   contactList:

@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public Transform messageSpawnPoint;
     public Text messagePrefab;
+    public GameObject endGameTree;
 
     public float armingDelay = 0.5f;
     public string specialMessage = "";
@@ -64,7 +65,7 @@ public class ScoreManager : MonoBehaviour
 
         instance = this;
 
-        SyncSpecialMessage();
+        //SyncSpecialMessage();
     }
 	
 	// Update is called once per frame
