@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour {
 	private float poopAnimTime = 1f;
 
 	public bool jumpable = true;
+	public GameObject poop;
+	public Transform poopSpawnLoc;
+
+	[SerializeField]
+	private int poopAmmo = 5;
 
 	//if this is the current active movement script
 	//for use with ride-on etc - only one should be acttive
@@ -32,11 +37,18 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if(isActiveMovement)
-		movement();
-	else{anim.SetBool("Running",false);}
-	if(jumpable)
-		setAnim();
+		if(isActiveMovement)
+			movement();
+		else if (jumpable) 
+			anim.SetBool("Running",false);
+
+		if(jumpable)
+			setAnim();
+
+		if(Input.GetButtonDown("poop") && jumpable && poopAmmo > 4) {
+			Freeze();
+			Poop();
+		}
 	}
 
 	private void setAnim(){
@@ -44,10 +56,15 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
+	private void Poop(){
+		//pooAmmo = 0;
+		Debug.Log("Pooping");
+		Instantiate(poop,poopSpawnLoc.position,Quaternion.identity);
+	}
+
 	private void movement(){
-		if(Input.GetButtonDown("poop")) {
-			Freeze();
-		}
+		
+
 		if(Input.GetButton("Sprint")) sprinting = true;
 		else sprinting = false;
 		float rVector =0f,mVector=0f;

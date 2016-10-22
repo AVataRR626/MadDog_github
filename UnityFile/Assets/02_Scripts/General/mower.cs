@@ -12,6 +12,7 @@ public class mower : MonoBehaviour {
 	private PlayerMovement M;
 	private PlayerMovement dog;
 
+	private FixedJoint joint;
 	private float ActivateTime;
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class mower : MonoBehaviour {
 	void Update () {
 		if(M.getActive() && Input.GetButtonDown("Jump") && Time.time - ActivateTime > 1f){//go back to dog.
 			dog.setActive();
+			Destroy(GetComponent<FixedJoint>());
 			M.setActive();
 		}
 		if(M.getActive()){
@@ -38,10 +40,15 @@ public class mower : MonoBehaviour {
 			dog.setActive();
 			M.setActive();
 			ActivateTime = Time.time;
-			other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+			Rigidbody rb = other.GetComponent<Rigidbody>();
+			joint = this.gameObject.AddComponent<FixedJoint>();
+			rb.velocity = Vector3.zero;
+			
 			other.transform.position = spawnLoc.position;
 			other.transform.rotation = spawnLoc.rotation;
+			joint.connectedBody = rb;
 			other.transform.parent = transform;
+
 		}
 	}
 }
