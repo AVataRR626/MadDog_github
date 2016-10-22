@@ -1198,7 +1198,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpable: 1
-  stanima: 100
   poop: {fileID: 1000013589879966, guid: c8377ce9310977242b378bab7c1742e0, type: 2}
   poopSpawnLoc: {fileID: 4000012062777124}
   poopAmmo: 5

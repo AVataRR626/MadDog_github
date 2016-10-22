@@ -156,7 +156,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	public void AddAmmo(){
-		poopAmmo++;
+		if(poopAmmo<4)
+			poopAmmo++;
 	}
 
 	public bool getActive() {return isActiveMovement;}
