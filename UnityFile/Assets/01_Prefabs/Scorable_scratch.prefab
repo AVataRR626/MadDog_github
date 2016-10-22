@@ -122,7 +122,7 @@ MonoBehaviour:
   baseScore: 10
   velocityMultiplier: 5
   scoreFX: {fileID: 0}
-  comboTimerBonus: 1.5
+  comboTimerBonus: 0.25
   knocked: 0
 --- !u!208 &208000012026246160
 NavMeshObstacle:

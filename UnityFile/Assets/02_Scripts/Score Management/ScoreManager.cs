@@ -5,17 +5,20 @@ using System.Collections;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-
+    public Transform messageSpawnPoint;
+    public Text messagePrefab;
 
     public float armingDelay = 0.5f;
     public string specialMessage = "";
     public Text specialMessageDisplay;
+    public int comboBonusThreshold = 5;
+    public int comboBonusBasic = 5;
+    public int comboBonusExtra = 10;
 
     private float comboTimer;
     private int score;
     private int lastCombo;
     private int comboCounter;
-
 
 
     public bool Armed
@@ -50,6 +53,8 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+
+
 	// Use this for initialization
 	void Start ()
     {
@@ -80,6 +85,14 @@ public class ScoreManager : MonoBehaviour
         {
             lastCombo = comboCounter;
             comboCounter = 0;
+            comboTimer = 0;
+
+            if (lastCombo > 1)
+            {
+                
+
+                SpawnMessage(lastCombo + "X COMBO!!");
+            }
         }
     }
 
@@ -137,5 +150,12 @@ public class ScoreManager : MonoBehaviour
         specialMessage = msg;
 
         SyncSpecialMessage();
+    }
+
+    public void SpawnMessage(string message)
+    {
+        Text newMessage = Instantiate(messagePrefab, messageSpawnPoint.transform.position, Quaternion.identity) as Text;
+        newMessage.transform.parent = messageSpawnPoint;
+        newMessage.text = message;
     }
 }

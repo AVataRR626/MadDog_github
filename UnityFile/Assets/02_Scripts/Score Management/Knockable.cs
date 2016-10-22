@@ -48,7 +48,7 @@ public class Knockable : MonoBehaviour
     {
         if(!knocked && ScoreManager.instance.Armed)
         { 
-            ScoreManager.instance.AddScore(ActualScore);
+            ScoreManager.instance.AddScore(ActualScore,comboTimerBonus);
             knocked = true;
 
             SpecialMessage sm = GetComponent<SpecialMessage>();
