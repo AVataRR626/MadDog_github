@@ -12,4 +12,11 @@ public class Food : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public void OnTriggerEnter(Collider other){
+		if (other.GetComponent<PlayerMovement> () != null) {
+			other.GetComponent<PlayerMovement> ().AddAmmo ();
+			Destroy (this.gameObject);
+		}
+	}
 }

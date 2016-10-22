@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour {
 			stanima += Time.deltaTime * stanimaBurndownRate/2;
 		}
 
-		if(Input.GetButtonDown("poop") && jumpable && poopAmmo > 4) {
+		if(Input.GetButtonDown("poop") && jumpable && poopAmmo >= 4) {
 			Freeze();
 			Poop();
 		}
@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void Poop(){
-		pooAmmo = 0;
+		poopAmmo = 0;
 		Debug.Log("Pooping");
 		Instantiate(poop,poopSpawnLoc.position,Quaternion.identity);
 	}
@@ -156,7 +156,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	public void AddAmmo(){
-		pooAmmo++;
+		poopAmmo++;
 	}
 
 	public bool getActive() {return isActiveMovement;}
