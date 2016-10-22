@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013383780544}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0929146, y: -1.01, z: -2.7313695}
+  m_LocalPosition: {x: -52.5407, y: 1.6, z: -9.06}
   m_LocalScale: {x: 0.31450766, y: 0.31450766, z: 0.31450766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -152,4 +152,5 @@ MonoBehaviour:
   scoreFX: {fileID: 0}
   comboTimerBonus: 0.5
   knockedTint: {r: 0.1, g: 0.1, b: 0.1, a: 0.1}
+  playerKnockForce: 500
   knocked: 0

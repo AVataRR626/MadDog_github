@@ -18,6 +18,8 @@ public class Knockable : MonoBehaviour
     public GameObject scoreFX;
     public float comboTimerBonus = 0.5f;
     public Color knockedTint = new Color(0.1f, 0.1f, 0.1f, 0.1f);
+    public float basePlayerKnockForce = 50;
+    public float playerSpeedForceMultiplier = 2;
 
     public bool knocked = false;
 
@@ -38,14 +40,9 @@ public class Knockable : MonoBehaviour
 	void Start ()
     {
         rBody = GetComponent<Rigidbody>();
+        rBody.collisionDetectionMode = CollisionDetectionMode.Continuous;
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
 
     void OnCollisionEnter(Collision c)
     {
@@ -56,12 +53,20 @@ public class Knockable : MonoBehaviour
 
             ApplyTint(transform, knockedTint);
 
-
-
             SpecialMessage sm = GetComponent<SpecialMessage>();
 
             if (sm != null)
                 sm.Trigger();
+
+
+        }
+
+        if (c.collider.tag == "Player")
+        {
+            Vector3 knockDirection = transform.position - c.gameObject.transform.position;
+            knockDirection.y += 0.5f;
+            float totalForce = basePlayerKnockForce;
+            rBody.AddForce(knockDirection * basePlayerKnockForce);
         }
     }
 
