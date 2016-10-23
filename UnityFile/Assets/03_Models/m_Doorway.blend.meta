@@ -1,24 +1,27 @@
 fileFormatVersion: 2
-guid: 9007e429239d5e742b8b068077ae1b69
-timeCreated: 1477140086
+guid: e1f299ae6b951ef4bbfe70616fd3a58b
+timeCreated: 1477177238
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cube
-    100004: Fridge
-    400000: //RootNode
-    400002: Cube
-    400004: Fridge
-    2300000: //RootNode
-    2300002: Cube
-    2300004: Fridge
-    3300000: //RootNode
-    3300002: Cube
-    3300004: Fridge
-    4300000: Fridge
+    100000: Cube
+    100002: Cube_001
+    100004: Door-Front
+    100006: //RootNode
+    400000: Cube
+    400002: Cube_001
+    400004: Door-Front
+    400006: //RootNode
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Door-Front
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Door-Front
+    4300000: Cube_001
     4300002: Cube
+    4300004: Door-Front
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -45,7 +48,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

@@ -65,7 +65,7 @@ public class ScoreManager : MonoBehaviour
 
         instance = this;
 
-        SyncSpecialMessage();
+        //SyncSpecialMessage();
     }
 	
 	// Update is called once per frame

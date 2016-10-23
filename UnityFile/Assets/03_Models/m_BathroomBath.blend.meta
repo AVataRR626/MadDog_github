@@ -1,24 +1,42 @@
 fileFormatVersion: 2
-guid: 9007e429239d5e742b8b068077ae1b69
-timeCreated: 1477140086
+guid: 96ed5269a1e50c34f9ec866ecdb90173
+timeCreated: 1477148806
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cube
-    100004: Fridge
-    400000: //RootNode
-    400002: Cube
-    400004: Fridge
-    2300000: //RootNode
-    2300002: Cube
-    2300004: Fridge
-    3300000: //RootNode
-    3300002: Cube
-    3300004: Fridge
-    4300000: Fridge
-    4300002: Cube
+    100000: Bath
+    100002: Curtain
+    100004: //RootNode
+    100006: Rails
+    100008: TapLeft
+    100010: TapRight
+    400000: Bath
+    400002: Curtain
+    400004: //RootNode
+    400006: Rails
+    400008: TapLeft
+    400010: TapRight
+    2300000: Bath
+    2300002: Curtain
+    2300004: Rails
+    2300006: TapLeft
+    2300008: TapRight
+    3300000: Bath
+    3300002: Curtain
+    3300004: Rails
+    3300006: TapLeft
+    3300008: TapRight
+    4300000: Curtain
+    4300002: Rails
+    4300004: Bath
+    4300006: TapLeft
+    4300008: TapRight
+    6400000: Bath
+    6400002: Curtain
+    6400004: Rails
+    6400006: TapLeft
+    6400008: TapRight
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -47,10 +65,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 0.5
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
