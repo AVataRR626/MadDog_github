@@ -21,8 +21,9 @@ public class Food : MonoBehaviour
 	}
 
 	public void OnTriggerEnter(Collider other){
-		if (other.GetComponent<PlayerMovement> () != null) {
-			other.GetComponent<PlayerMovement> ().AddAmmo ();
+		PlayerMovement pm = other.GetComponent<PlayerMovement> ();
+		if (pm != null && pm.PoopAmmo !=4) {
+			pm.AddAmmo ();
 			Destroy (this.gameObject);
 		}
 	}
