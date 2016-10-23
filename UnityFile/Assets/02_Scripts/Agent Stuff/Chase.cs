@@ -134,6 +134,7 @@ public class Chase : MonoBehaviour
             {
                 //target too far away, resume previous tasks...
                 target = null;
+                mover.Destination = transform;
                 ResumePatrol();
             }
             else if(dist2Target < minChaseRange)

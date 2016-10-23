@@ -716,7 +716,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010383190534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.4, y: 0.61, z: -11.6}
+  m_LocalPosition: {x: -20.1, y: 0.71, z: 73.6}
   m_LocalScale: {x: 0.613011, y: 0.613011, z: 0.613011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   sphereCastRadius: 0.1
   visualiseInEditor: 1
   closestDistance: 0.5
-  dontClipTag: 506c61796572
+  dontClipTag: Building
 --- !u!124 &124000012974814960
 Behaviour:
   m_ObjectHideFlags: 1
