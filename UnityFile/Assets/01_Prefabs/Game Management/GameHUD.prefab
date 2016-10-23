@@ -301,7 +301,7 @@ MonoBehaviour:
   messagePrefab: {fileID: 114000012556791232, guid: af1c89ad8a5c6e94b9cfa032a5bb6287,
     type: 2}
   endGameTree: {fileID: 1000012777097672}
-  armingDelay: 0.75
+  armingDelay: 4
   specialMessage: TestMessage
   specialMessageDisplay: {fileID: 114000010825829894}
   comboBonusThreshold: 3
