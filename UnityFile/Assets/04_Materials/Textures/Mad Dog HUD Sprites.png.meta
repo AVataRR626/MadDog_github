@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 7e4b59736aae06f4882f4c6274cbc777
-timeCreated: 1477188016
-licenseType: Free
+timeCreated: 1477198952
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: PoopForeground
@@ -64,7 +64,7 @@ TextureImporter:
         y: 1520
         width: 512
         height: 464
-      alignment: 0
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -77,7 +77,7 @@ TextureImporter:
         y: 1516
         width: 510
         height: 464
-      alignment: 0
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
