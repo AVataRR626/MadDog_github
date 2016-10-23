@@ -9,6 +9,7 @@ TagManager:
   - People
   - Useable
   - EndGameTree
+  - Building
   layers:
   - Default
   - TransparentFX
