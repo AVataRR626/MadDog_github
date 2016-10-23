@@ -24,6 +24,9 @@ public class Food : MonoBehaviour
 		PlayerMovement pm = other.GetComponent<PlayerMovement> ();
 		if (pm != null && pm.PoopAmmo !=4) {
 			pm.AddAmmo ();
+			if (other.gameObject.tag == "Player") {
+				pm.playChewSound ();
+			}
 			Destroy (this.gameObject);
 		}
 	}

@@ -187,6 +187,9 @@ public class PlayerMovement : MonoBehaviour {
 		if(poopAmmo<4)
 			poopAmmo++;
 	}
+	public void playChewSound(){
+		transform.GetChild (0).GetComponent<AudioSource> ().Play ();
+	}
 
 	public bool getActive() {return isActiveMovement;}
 }

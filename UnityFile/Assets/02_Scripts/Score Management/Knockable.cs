@@ -44,7 +44,6 @@ public class Knockable : MonoBehaviour
 		if (GetComponent<NavMeshObstacle> () == null) {
 			NavMeshObstacle ob = gameObject.AddComponent <NavMeshObstacle>() as NavMeshObstacle;
 		}
-
 	}
 
 
@@ -69,6 +68,7 @@ public class Knockable : MonoBehaviour
         {
             Vector3 knockDirection = transform.position - c.gameObject.transform.position;
             knockDirection.y += 0.65f;
+			c.gameObject.GetComponent<AudioSource> ().Play ();
             float totalForce = basePlayerKnockForce * c.gameObject.GetComponent<PlayerMovement>().Speed * playerSpeedForceMultiplier;
             rBody.AddForce(knockDirection * basePlayerKnockForce);
         }
