@@ -34,6 +34,11 @@ public class Poopable : MonoBehaviour
         {
             Debug.Log("C'mooon");
             ScoreManager.instance.AddScore((int)baseScore);
+
+            SpecialMessage sm = GetComponent<SpecialMessage>();
+
+            if (sm != null)
+                sm.Trigger();
         }
     }
 }

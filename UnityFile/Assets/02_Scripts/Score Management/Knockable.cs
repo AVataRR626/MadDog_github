@@ -43,6 +43,7 @@ public class Knockable : MonoBehaviour
         rBody.collisionDetectionMode = CollisionDetectionMode.Continuous;
 		if (GetComponent<NavMeshObstacle> () == null) {
 			NavMeshObstacle ob = gameObject.AddComponent <NavMeshObstacle>() as NavMeshObstacle;
+            ob.carving = true;
 		}
 	}
 
