@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692504, g: 0.4967869, b: 0.57508504, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -240,6 +240,78 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56483490}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &81508504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000010421484534, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 81508505}
+  - 222: {fileID: 81508507}
+  - 114: {fileID: 81508506}
+  m_Layer: 5
+  m_Name: StaminaBar Underlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &81508505
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224000010173824110, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81508504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.662507, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 276182514}
+  m_RootOrder: 8
+  m_AnchorMin: {x: 0.3375217, y: 0.046000004}
+  m_AnchorMax: {x: 0.65852165, y: 0.16283578}
+  m_AnchoredPosition: {x: 1.3999634, y: -0.0000076293945}
+  m_SizeDelta: {x: -0.9500122, y: 19}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &81508506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000011112860928, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81508504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.04411763, g: 0.20892519, b: 1, a: 0.078}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300004, guid: 7e4b59736aae06f4882f4c6274cbc777, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 1
+--- !u!222 &81508507
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222000012066843422, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81508504}
 --- !u!1001 &125874999
 Prefab:
   m_ObjectHideFlags: 0
@@ -412,6 +484,11 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400026, guid: 6afd4d3c04d19814bb3f33e4a7e1c9a8, type: 3}
   m_PrefabInternal: {fileID: 1793717288}
+--- !u!224 &276182514 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224000011576366412, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1435748742}
 --- !u!1001 &278924952
 Prefab:
   m_ObjectHideFlags: 0
@@ -2018,6 +2095,26 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000010815248604, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012917296302, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013181008562, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013019765806, guid: bdf6c2357afcbfd449ba0b3dc155546e,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdf6c2357afcbfd449ba0b3dc155546e, type: 2}
