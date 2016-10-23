@@ -55,8 +55,12 @@ public class Patrol : MonoBehaviour
 
     public void SetDestination()
     {
+        
         if (patrolPoints.Length > 0)
+        {
             mover.Destination = patrolPoints[patrolIndex];
+            Debug.Log("GGGG");
+        }
     }
 
     public static int LoopInt(int value, int min, int max)

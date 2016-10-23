@@ -37,9 +37,15 @@ public class Chase : MonoBehaviour
     {
         get
         {
-            dist2Target = Dist2Target;
+            return isInRange;
+        }
+    }
 
-            return dist2Target < maxChaseRange && dist2Target > minChaseRange && target != null;
+    public bool CloseChaseRange
+    {
+        get
+        {
+            return dist2Target < minChaseRange;
         }
     }
 
@@ -47,6 +53,7 @@ public class Chase : MonoBehaviour
     private DestinationMover mover;
     private float dist2Target;
     private bool lineOfSight = false;
+    private bool isInRange = false;
 
     // Use this for initialization
     void Start ()
@@ -97,31 +104,60 @@ public class Chase : MonoBehaviour
     {
         dist2Target = Dist2Target;
 
-        //keep chasing target while it is in range
-        if (InChaseRange)
-        {
-            mover.Destination = target;
-            patrol.enabled = false;
+        isInRange = false;
+        lineOfSight = false;
+
+        Debug.Log("AAAA");
+
+        if (target != null)
+        {  
+            //if in chase range.... go towards the target
+            if(dist2Target > minChaseRange && dist2Target < maxChaseRange)
+            {
+                isInRange = true;
+                //check if line of sight is clear
+                lineOfSight = CheckLineOfSight(target.gameObject, transform.position);
+                if (lineOfSight)
+                {
+                    //distance and line of sight tests passed, go chase!
+                    mover.Destination = target;
+                    patrol.enabled = false;
+                }
+                else
+                {
+                    //resume previous tasks...
+                    target = null;
+                    ResumePatrol();
+                }
+            }
+            else if(dist2Target > maxChaseRange)
+            {
+                //target too far away, resume previous tasks...
+                target = null;
+                ResumePatrol();
+            }
+            else if(dist2Target < minChaseRange)
+            {
+                //you've reached your target, don't chase any further
+                mover.Destination = transform;
+                patrol.enabled = false;
+                isInRange = true;
+            }
         }
         else
         {
-            //this means that the target is too far away, time to back off...
-            if (dist2Target > minChaseRange || target == null)
-            {
-                Debug.Log("Too far, return to patrol - or target destroyed");
-                patrol.enabled = true;
-                patrol.SetDestination();
-                target = null;
-                mover.Destination = transform;
-            }
-            else
-            {
-                //this means you're right up against your target, don't move into
-                //the target..
-                patrol.enabled = false;
-                mover.Destination = transform;
-            }
+            Debug.Log("ZZZ");
+            target = null;
+            ResumePatrol();
         }
+    }
+
+    public void ResumePatrol()
+    {
+        if(mover.Destination == null)
+            mover.Destination = transform;
+
+        patrol.enabled = true;
     }
 
     void CheckLineOfSight()

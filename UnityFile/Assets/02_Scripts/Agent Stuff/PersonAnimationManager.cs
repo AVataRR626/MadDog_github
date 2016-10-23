@@ -61,12 +61,12 @@ public class PersonAnimationManager : MonoBehaviour
 
             if (chaser.target != null)
             {
-                if (!chaser.InChaseRange)
+                
+                if(chaser.CloseChaseRange)
                 {
-                    if (chaser.Dist2Target <= chaser.minChaseRange)
-                        anim.SetBool(actionStateString, true);
-
+                    anim.SetBool(actionStateString, true);
                 }
+                
             }
         }
     }
